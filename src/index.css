@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Seat container */
+.seat {
+  position: relative;
+  width: 42px;
+  height: 48px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Backrest */
+.seat-back {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 55%;
+  border-radius: 6px 6px 2px 2px;
+  background: linear-gradient(180deg, #4f9aff, #1e63d0);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.4),
+              0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Seat base */
+.seat-base {
+  width: 90%;
+  height: 45%;
+  border-radius: 4px 4px 8px 8px;
+  background: linear-gradient(180deg, #1e63d0, #003b95);
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.3),
+              0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* States */
+.seat.available {
+  background: none;
+}
+
+.seat.selected .seat-back {
+  background: linear-gradient(180deg, #3bd16f, #0f9b44);
+}
+
+.seat.selected .seat-base {
+  background: linear-gradient(180deg, #2ca85c, #0c7434);
+}
+
+.seat.booked {
+  cursor: not-allowed;
+}
+
+.seat.booked .seat-back,
+.seat.booked .seat-base {
+  background: linear-gradient(180deg, #555, #333);
+  opacity: 0.6;
+}
