@@ -76,7 +76,7 @@ const Seat = ({ status = "available", number, price, onClick }) => {
         {/* seat number */}
         <span
           className={`text-sm font-medium ${
-            isBooked ? "text-gray-300" : "text-white"
+            isBooked ? "text-gray-300" : "text-black"
           }`}
         >
           {number}
@@ -86,7 +86,7 @@ const Seat = ({ status = "available", number, price, onClick }) => {
       {/* price below seat */}
       <div
         className={`text-xs ${
-          isBooked ? "text-white/60" : "text-gray-200"
+          isBooked ? "text-black/60" : "text-gray-200"
         } select-none`}
       >
         ₹{price}
@@ -185,7 +185,7 @@ export default function BusList() {
         {/* Seat base */}
         <div className="absolute bottom-0 w-[75%] h-[18%] bg-black/20 rounded-b-sm"></div>
         {/* Seat number */}
-        <span className="text-xs text-white font-semibold">{seatNo}</span>
+        <span className="text-xs text-black font-semibold">{seatNo}</span>
       </div>
     );
   };
@@ -202,23 +202,23 @@ export default function BusList() {
       <div className="bg-white/12 backdrop-blur-md border-b border-white/20 sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Bus className="text-white w-7 h-7" />
-            <h1 className="text-white font-semibold text-xl">RedBus - Glass Demo</h1>
+            <Bus className="text-black w-7 h-7" />
+            <h1 className="text-black font-semibold text-xl">MDG</h1>
           </div>
 
           <div className="flex items-center gap-3">
             <input
-              className="px-3 py-2 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/10"
+              className="px-3 py-2 rounded-lg bg-white/10 text-black placeholder-white/70 border border-white/10"
               placeholder="From: Karunamoyee"
             />
             <input
-              className="px-3 py-2 rounded-lg bg-white/10 text-white placeholder-white/70 border border-white/10"
+              className="px-3 py-2 rounded-lg bg-white/10 text-black placeholder-white/70 border border-white/10"
               placeholder="To: Siliguri"
             />
-            <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-white">
+            <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-black">
               <Calendar size={18} /> <span>02 Nov, 2025</span>
             </div>
-            <button className="rounded-full bg-red-500 px-3 py-2 text-white hover:bg-red-600">
+            <button className="rounded-full bg-red-500 px-3 py-2 text-black hover:bg-red-600">
               <Search size={16} />
             </button>
           </div>
@@ -229,7 +229,7 @@ export default function BusList() {
       <div className="max-w-7xl mx-auto px-6 py-8 flex gap-6">
         {/* left filters */}
         <aside className="w-72 sticky top-28 self-start">
-          <div className="bg-white/12 backdrop-blur-md rounded-2xl border border-white/20 p-5 text-white shadow-sm">
+          <div className="bg-white backdrop-blur-md rounded-2xl border border-white/20 p-5 text-black shadow-sm">
             <h3 className="font-semibold text-lg mb-3">Filter buses</h3>
             {[
               "Primo Bus (10)",
@@ -246,7 +246,7 @@ export default function BusList() {
                 key={i}
                 className="flex items-center gap-2 p-2 rounded-md hover:bg-white/6 cursor-pointer text-sm"
               >
-                <Filter size={16} className="text-white/70" />
+                <Filter size={16} className="text-black/70" />
                 <span>{f}</span>
               </div>
             ))}
@@ -256,9 +256,9 @@ export default function BusList() {
         {/* list & details column */}
         <main className="flex-1 space-y-6">
           {/* header */}
-          <div className="text-white/90">
+          <div className="text-black/90">
             <h2 className="text-lg">From <span className="font-semibold">Kolkata</span> to <span className="font-semibold">Siliguri</span></h2>
-            <p className="text-sm text-white/70">31 buses from other pickup and/or drop points</p>
+            <p className="text-sm text-black/70">31 buses from other pickup and/or drop points</p>
           </div>
 
           {/* bus cards */}
@@ -272,18 +272,18 @@ export default function BusList() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.06 }}
-                  className="bg-white/12 backdrop-blur-md border border-white/16 rounded-2xl overflow-hidden"
+                  className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md"
                 >
                   <div className="p-5 flex gap-4 items-start">
                     <div className="flex-1">
                       <div className="flex items-center gap-3">
-                        <span className="text-xs px-2 py-1 rounded-md bg-blue-50/30 text-blue-200">IS STARTING</span>
-                        <p className="text-sm text-white/70">From: {bus.from}</p>
+                        <span className="text-xs px-2 py-1 rounded-md bg-blue-50/30 text-blue-600">IS STARTING</span>
+                        <p className="text-sm text-black/70">From: {bus.from}</p>
                       </div>
 
-                      <h3 className="text-white font-semibold text-lg mt-3">{bus.name}</h3>
-                      <div className="flex items-center gap-4 mt-2 text-white/70 text-sm">
-                        <span className="flex items-center gap-1 text-yellow-300"><Star size={14} /> {bus.rating} <span className="text-white/60">({bus.reviews})</span></span>
+                      <h3 className="text-black font-semibold text-lg mt-3">{bus.name}</h3>
+                      <div className="flex items-center gap-4 mt-2 text-black/70 text-sm">
+                        <span className="flex items-center gap-1 text-yellow-400"><Star size={14} /> {bus.rating} <span className="text-black/60">({bus.reviews})</span></span>
                         <span className="flex items-center gap-1"><Clock size={14} /> {bus.duration}</span>
                         <span>{bus.seats} Seats</span>
                       </div>
@@ -291,16 +291,16 @@ export default function BusList() {
                       {/* small inline nav like screenshot */}
                       <div className="flex gap-4 mt-4 text-sm">
                         {["Why book this bus?", "Bus route", "Boarding point", "Dropping point", "Rest stop"].map((t) => (
-                          <button key={t} className="text-white/70 hover:text-white">{t}</button>
+                          <button key={t} className="text-black/70 hover:text-black">{t}</button>
                         ))}
                       </div>
                     </div>
 
                     <div className="w-48 text-right">
-                      <div className="text-white font-semibold text-lg flex items-center justify-end gap-2">
+                      <div className="text-black font-semibold text-lg flex items-center justify-end gap-2">
                         <IndianRupee size={14} /> {bus.price}
                       </div>
-                      <p className="text-sm text-white/70">Onwards</p>
+                      <p className="text-sm text-black/70">Onwards</p>
 
                       <div className="mt-4 flex justify-end">
                         <button
@@ -325,7 +325,7 @@ export default function BusList() {
                           <div className="w-[160px] bg-white/8 rounded-2xl p-4 flex flex-col items-end justify-start">
                             {/* steering wheel */}
                             <div className="w-full flex justify-end mb-2">
-                              <div className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/40">⚙</div>
+                              <div className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-black/40">⚙</div>
                             </div>
 
                             {/* seat grid without scroll */}
@@ -335,8 +335,8 @@ export default function BusList() {
                           </div>
 
                           {/* legend */}
-                          <div className="mt-6 w-full text-sm text-white/80">
-                            <h4 className="text-center text-white/90 mb-2">Know your seat types</h4>
+                          <div className="mt-6 w-full text-sm text-black/80">
+                            <h4 className="text-center text-black/90 mb-2">Know your seat types</h4>
                             <div className="grid grid-cols-2 gap-3">
                               <div className="flex items-center gap-2">
                                 <div className="w-4 h-4 border-2 border-green-600 rounded-t-sm" />
@@ -364,12 +364,12 @@ export default function BusList() {
                           <div className="flex gap-3 items-center mb-4">
                             <img src="https://images.unsplash.com/photo-1563729784479-1d4d3f6f6ebc?w=800" alt="bus" className="w-44 h-28 rounded-lg object-cover" />
                             <img src="https://images.unsplash.com/photo-1563729784479-1d4d3f6f6ebc?w=800" alt="bus" className="w-44 h-28 rounded-lg object-cover" />
-                            <div className="w-20 h-28 rounded-lg bg-white/8 flex items-center justify-center text-white/60">More</div>
+                            <div className="w-20 h-28 rounded-lg bg-white/8 flex items-center justify-center text-black/60">More</div>
                           </div>
 
                           {/* tabs */}
                           <div className="border-b border-white/10 mb-4">
-                            <nav className="flex gap-6 text-white/80">
+                            <nav className="flex gap-6 text-black/80">
                               {[
                                 { key: "why", label: "Why book this bus?" },
                                 { key: "route", label: "Bus route" },
@@ -383,7 +383,7 @@ export default function BusList() {
                                   className={`py-3 px-1 -mb-px ${
                                     tab === t.key
                                       ? "text-red-400 border-b-2 border-red-400"
-                                      : "text-white/60"
+                                      : "text-black/60"
                                   }`}
                                 >
                                   {t.label}
@@ -393,7 +393,7 @@ export default function BusList() {
                           </div>
 
                           {/* tab content */}
-                          <div className="text-white/90">
+                          <div className="text-black/90">
                             {tab === "why" && (
                               <>
                                 <h4 className="text-xl font-semibold mb-3">Why book this bus?</h4>
@@ -409,7 +409,7 @@ export default function BusList() {
                             {tab === "route" && (
                               <>
                                 <h4 className="text-xl font-semibold mb-3">Bus route</h4>
-                                <p className="text-white/70">Kolkata → Salt Lake → Burdwan → Panagarh → Muchipara → Durgapur (West Bengal) → Raniganj → Asansol</p>
+                                <p className="text-black/70">Kolkata → Salt Lake → Burdwan → Panagarh → Muchipara → Durgapur (West Bengal) → Raniganj → Asansol</p>
                               </>
                             )}
 
@@ -418,22 +418,22 @@ export default function BusList() {
                                 <h4 className="text-xl font-semibold mb-3">Boarding point</h4>
                                 <div className="space-y-4">
                                   <div className="flex items-start gap-3">
-                                    <div className="w-10 text-sm text-white/60">09:15</div>
+                                    <div className="w-10 text-sm text-black/60">09:15</div>
                                     <div>
                                       <div className="font-medium">Karunamoyee (IBT)</div>
-                                      <div className="text-white/70 text-sm">Karunamoyee Bus Stop</div>
+                                      <div className="text-black/70 text-sm">Karunamoyee Bus Stop</div>
                                     </div>
                                   </div>
 
                                   <div className="flex items-start gap-3">
-                                    <div className="w-10 text-sm text-white/60">09:22</div>
+                                    <div className="w-10 text-sm text-black/60">09:22</div>
                                     <div>
                                       <div className="font-medium">Ultadanga</div>
-                                      <div className="text-white/70 text-sm">Ultadanga Dakshindari Bus Stand</div>
+                                      <div className="text-black/70 text-sm">Ultadanga Dakshindari Bus Stand</div>
                                     </div>
                                   </div>
 
-                                  <button className="mt-2 px-4 py-2 bg-red-500 rounded-full text-white">View all boarding points</button>
+                                  <button className="mt-2 px-4 py-2 bg-red-500 rounded-full text-black">View all boarding points</button>
                                 </div>
                               </>
                             )}
@@ -441,14 +441,14 @@ export default function BusList() {
                             {tab === "dropping" && (
                               <>
                                 <h4 className="text-xl font-semibold mb-3">Dropping point</h4>
-                                <p className="text-white/70">Durgapur (West Bengal) - City Centre</p>
+                                <p className="text-black/70">Durgapur (West Bengal) - City Centre</p>
                               </>
                             )}
 
                             {tab === "rest" && (
                               <>
                                 <h4 className="text-xl font-semibold mb-3">Rest stop</h4>
-                                <p className="text-white/70">Krishnanagar Dhaba — 30 min</p>
+                                <p className="text-black/70">Krishnanagar Dhaba — 30 min</p>
                               </>
                             )}
                           </div>
@@ -466,8 +466,8 @@ export default function BusList() {
       {/* bottom sticky bar - summary */}
       <div className="fixed left-0 right-0 bottom-6 flex justify-center pointer-events-none">
         <div className="max-w-4xl w-full px-6">
-          <div className="bg-white/12 backdrop-blur-md border border-white/16 rounded-full px-6 py-3 flex items-center justify-between pointer-events-auto">
-            <div className="flex items-center gap-4 text-white">
+          <div className="bg-white backdrop-blur-md border border-white/16 rounded-full px-6 py-3 flex items-center justify-between pointer-events-auto">
+            <div className="flex items-center gap-4 text-black">
               <div>
                 <div className="text-sm">Selected</div>
                 <div className="font-semibold">{selectedSeats.length} seat(s)</div>
@@ -486,7 +486,7 @@ export default function BusList() {
             </div>
 
             <div className="flex items-center gap-4">
-              <button className="bg-white/6 text-white px-4 py-2 rounded-full">-</button>
+              <button className="bg-white/12 text-black px-4 py-2 rounded-full">-</button>
               <button className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-full font-semibold">Select boarding & dropping points</button>
             </div>
           </div>

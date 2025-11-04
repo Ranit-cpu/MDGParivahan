@@ -14,7 +14,11 @@ const HomePage = () => {
           <span className="text-gray-800"> MDG</span>
         </h1>
         <ul className="hidden md:flex space-x-6 text-xs font-medium text-gray-900">
-          <li className="hover:text-blue-600 cursor-pointer transition">About</li>
+          <li className="hover:text-blue-600 cursor-pointer transition">
+            <a href="/about" className="hover:text-blue-600 transition">
+              About
+            </a>
+          </li>
           <li className="hover:text-blue-600 cursor-pointer transition">Features</li>
           <li className="hover:text-blue-600 cursor-pointer transition">Pricing</li>
           <li className="hover:text-blue-600 cursor-pointer transition">Contact</li>
@@ -93,14 +97,6 @@ const HomePage = () => {
                   <p className="font-semibold text-gray-500">Optional</p>
                 </div>
               </div>
-
-              {/* Arrow Button */}
-              <button
-                onClick={() => navigate("/buses")}
-                className="bg-red-500 text-white px-5 py-3 rounded-r-xl hover:bg-red-600 transition duration-200 flex items-center justify-center"
-              >
-                <ArrowRight size={16} />
-              </button>
             </div>
           </div>
 
@@ -109,9 +105,10 @@ const HomePage = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/buses")}
               className="bg-blue-600/80 hover:bg-blue-700 px-6 py-2.5 rounded-lg text-white font-semibold text-sm transition duration-200 shadow-md"
             >
-              VIEW OFFERS
+              BOOK NOW
             </motion.button>
           </div>
         </motion.div>
