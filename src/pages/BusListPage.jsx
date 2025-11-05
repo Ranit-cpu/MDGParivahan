@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 const sampleBuses = [
   {
     id: 1,
-    name: "SBSTC - Kolkata - Siliguri - Volvo A/C Seater (2+2)",
+    name: "Kolkata - Bishnupur - Volvo A/C Seater (2+2)",
     rating: 3.8,
     reviews: 264,
     startTime: "18:45",
     endTime: "06:45",
-    duration: "12h",
+    duration: "4h",
     seats: 40,
     price: 910,
     from: "Esplanade",
@@ -466,7 +466,7 @@ export default function BusList() {
       {/* bottom sticky bar - summary */}
       <div className="fixed left-0 right-0 bottom-6 flex justify-center pointer-events-none">
         <div className="max-w-4xl w-full px-6">
-          <div className="bg-white backdrop-blur-md border border-white/16 rounded-full px-6 py-3 flex items-center justify-between pointer-events-auto">
+          <div className="bg-white backdrop-blur-md border border-black rounded-full px-6 py-3 flex items-center justify-between pointer-events-auto">
             <div className="flex items-center gap-4 text-black">
               <div>
                 <div className="text-sm">Selected</div>

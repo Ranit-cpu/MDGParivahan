@@ -9,7 +9,7 @@ const LandingLoader = () => {
     // Wait for 4 seconds before redirecting to home page
     const timer = setTimeout(() => {
       navigate("/home"); // change to your actual home route if needed
-    }, 5000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [navigate]);

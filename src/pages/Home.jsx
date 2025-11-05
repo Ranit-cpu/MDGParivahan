@@ -55,7 +55,7 @@ const HomePage = () => {
           className="relative z-10 max-w-2xl bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20"
         >
           <h2 className="text-3xl md:text-4xl font-extrabold mb-3 leading-tight drop-shadow-[0_0_10px_rgba(0,0,0,0.5)]">
-            STOP LOOKING. <span className="text-red-500">START TRACKING!</span>
+            STOP LOOKING. <span className="text-red-500">START BOOKING</span>
           </h2>
           <p className="text-gray-100 mb-6 text-sm md:text-base drop-shadow-[0_0_6px_rgba(0,0,0,0.5)]">
             India's largest online bus ticketing platform, trusted by over 6 million Indians.
@@ -84,7 +84,7 @@ const HomePage = () => {
             {/* Date Picker Box */}
             <div className="flex bg-white/70 text-gray-800 rounded-xl shadow-md w-full md:w-auto backdrop-blur-md">
               <div className="flex items-center px-4 py-3 border-r border-gray-300">
-                <Calendar className="text-blue-500 mr-2 h-4 w-4" />
+                <Calendar className="text-blue-500 mr-2 h-4 w-5" />
                 <div>
                   <p className="text-xs text-gray-600">Select Date</p>
                   <p className="font-semibold text-red-500">14 Apr</p>

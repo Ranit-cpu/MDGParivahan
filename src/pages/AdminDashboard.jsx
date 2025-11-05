@@ -13,7 +13,7 @@ import {
 const sampleBookings = [
   {
     id: "BK-1023",
-    service: "SBSTC - Kolkata - Siliguri - Volvo A/C Seater (2+2)",
+    service: "Kolkata - Bishnupur - Volvo A/C Seater (2+2)",
     from: "Esplanade",
     dep: "18:45",
     arr: "06:45",
@@ -81,10 +81,10 @@ const AdminDashboard = () => {
         <aside className="w-64 h-screen sticky top-0 bg-white/10 backdrop-blur-xl border-r border-white/20 p-4 shadow-lg">
           <div className="mb-6 flex items-center gap-3">
             <div className="bg-gradient-to-tr from-red-500 to-pink-500 rounded-md w-10 h-10 flex items-center justify-center text-white font-bold">
-              RB
+              M
             </div>
             <div>
-              <div className="text-lg font-semibold">BO GDS</div>
+              <div className="text-lg font-semibold">MDG</div>
               <div className="text-xs text-gray-400">Admin Console</div>
             </div>
           </div>
@@ -257,7 +257,7 @@ const AdminDashboard = () => {
                             {expanded ? "Hide seats" : "View seats"}
                           </button>
 
-                          <button className="px-4 py-2 bg-white/5 border border-white/10 text-sm rounded-md hover:bg-white/10 transition">
+                          <button className="px-4 py-2 bg-white/5 border border-white/10 text-sm rounded-2xl hover:bg-white/10 transition">
                             Manage
                           </button>
                         </div>
