@@ -3,8 +3,9 @@ import LandingPage from "./assets/LandingPage";
 import HomePage from "./pages/Home";
 import AuthPage from "./pages/AuthPage";
 import BusList from "./pages/BusListPage";
-import AdminPage from "./pages/AdminDashboard"; // ✅ newly added Admin Page
-import About from "./pages/About"; // Added About page
+import AdminPage from "./pages/AdminDashboard";
+import PaymentPage from "./pages/PaymentPage";
+import TicketPage from "./pages/TicketPage";
 
 function App() {
   return (
@@ -15,11 +16,9 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/buses" element={<BusList />} />
-
-        {/* Admin Route */}
-        <Route path="/admin" element={<AdminPage />} /> {/* ✅ new Admin Dashboard */}
-        {/* About Route */}
-        <Route path="/about" element={<About />} />
+        <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/ticket" element={<TicketPage />} />
+        <Route path="/admin" element={<AdminPage />} />{" "}
       </Routes>
     </Router>
   );

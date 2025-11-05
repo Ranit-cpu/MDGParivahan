@@ -257,7 +257,7 @@ const AdminDashboard = () => {
                             {expanded ? "Hide seats" : "View seats"}
                           </button>
 
-                          <button className="px-4 py-2 bg-white/5 border border-white/10 text-sm rounded-2xl hover:bg-white/10 transition">
+                          <button className="px-4 py-2 bg-white/5 border border-white/10 text-sm rounded-full hover:bg-white/10 transition">
                             Manage
                           </button>
                         </div>

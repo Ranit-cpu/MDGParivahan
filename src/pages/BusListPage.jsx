@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { Calendar, Search, Star, Bus, Filter, Clock, IndianRupee } from "lucide-react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const sampleBuses = [
   {
@@ -100,6 +101,7 @@ export default function BusList() {
   const [selectedBusId, setSelectedBusId] = useState(null);
   const [tab, setTab] = useState("why");
   const [selectedSeats, setSelectedSeats] = useState([]); // stores keys like "1-5" => busId-seatNo
+  const navigate = useNavigate();
 
   // sample seat configuration generator:
   // We'll simulate 2+2 layout where some seats are sold and some seat types vary.
@@ -487,7 +489,32 @@ export default function BusList() {
 
             <div className="flex items-center gap-4">
               <button className="bg-white/12 text-black px-4 py-2 rounded-full">-</button>
-              <button className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-full font-semibold">Select boarding & dropping points</button>
+              <button
+                onClick={() => {
+                  const total = selectedSeats.reduce((acc, key) => {
+                    const busId = Number(key.split("-")[0]);
+                    const bus = buses.find((b) => b.id === busId);
+                    return acc + (bus?.price || 0);
+                  }, 0);
+                  if (total > 0) window.location.href = "/payment";
+                }}
+                disabled={
+                  selectedSeats.reduce((acc, key) => {
+                    const busId = Number(key.split("-")[0]);
+                    const bus = buses.find((b) => b.id === busId);
+                    return acc + (bus?.price || 0);
+                  }, 0) === 0
+                }
+                className={`px-5 py-2 rounded-full font-semibold transition ${
+                  selectedSeats.reduce((acc, key) => {
+                    const busId = Number(key.split("-")[0]);
+                    const bus = buses.find((b) => b.id === busId);
+                    return acc + (bus?.price || 0);
+                  }, 0) === 0
+                    ? "bg-gray-400 cursor-not-allowed text-white"
+                    : "bg-red-500 hover:bg-red-600 text-white"
+                }`}
+              >Proceed to Payment</button>
             </div>
           </div>
         </div>
