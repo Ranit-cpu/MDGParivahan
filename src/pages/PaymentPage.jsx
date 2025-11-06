@@ -72,7 +72,6 @@ const PaymentPage = () => {
       <div className="flex items-center space-x-8 mt-6 text-gray-700 text-sm backdrop-blur-md bg-white/70 px-6 py-2 rounded-full border border-white/10 shadow-sm">
         <span className="hover:text-blue-600 cursor-pointer">Select Seats</span>
         <span className="hover:text-blue-600 cursor-pointer">Passenger Details</span>
-        <span className="hover:text-blue-600 cursor-pointer">Review</span>
         <span className="text-blue-600 font-semibold">Payment</span>
       </div>
 

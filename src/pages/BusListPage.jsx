@@ -3,6 +3,7 @@ import { Calendar, Search, Star, Bus, Filter, Clock, IndianRupee } from "lucide-
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+
 const sampleBuses = [
   {
     id: 1,
@@ -205,7 +206,9 @@ export default function BusList() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Bus className="text-black w-7 h-7" />
-            <h1 className="text-black font-semibold text-xl">MDG</h1>
+            <h1 className="text-black font-semibold text-xl"><a href="/" className="hover:text-blue-600 transition">
+              MDG
+            </a></h1>
           </div>
 
           <div className="flex items-center gap-3">
@@ -226,6 +229,8 @@ export default function BusList() {
           </div>
         </div>
       </div>
+
+      
 
       {/* main content */}
       <div className="max-w-7xl mx-auto px-6 py-8 flex gap-6">
@@ -464,20 +469,20 @@ export default function BusList() {
           </div>
         </main>
       </div>
-
       {/* bottom sticky bar - summary */}
-      <div className="fixed left-0 right-0 bottom-6 flex justify-center pointer-events-none">
-        <div className="max-w-4xl w-full px-6">
-          <div className="bg-white backdrop-blur-md border border-black rounded-full px-6 py-3 flex items-center justify-between pointer-events-auto">
+      {/* bottom sticky bar - summary */}
+      <div className="fixed left-0 right-0 bottom-6 flex justify-center pointer-events-none z-50">
+        <div className="fixed bottom-6 right-25 max-w-xl w-full">
+          <div className="bg-white backdrop-blur-md border border-black rounded-full px-6 py-3 flex items-center justify-between pointer-events-auto shadow-lg">
             <div className="flex items-center gap-4 text-black">
               <div>
                 <div className="text-sm">Selected</div>
                 <div className="font-semibold">{selectedSeats.length} seat(s)</div>
               </div>
-              <div className="pl-4 border-l border-white/10">
+              <div className="pl-4 border-l border-black/10">
                 <div className="text-sm">Total</div>
                 <div className="font-semibold text-xl flex items-center gap-2">
-                  <IndianRupee size={16} />{" "}
+                  <IndianRupee size={16} />
                   {selectedSeats.reduce((acc, key) => {
                     const busId = Number(key.split("-")[0]);
                     const bus = buses.find((b) => b.id === busId);
@@ -489,32 +494,30 @@ export default function BusList() {
 
             <div className="flex items-center gap-4">
               <button className="bg-white/12 text-black px-4 py-2 rounded-full">-</button>
-              <button
+              <motion.button
+                whileHover={{ scale: selectedSeats.length > 0 ? 1.05 : 1 }}
+                whileTap={{ scale: selectedSeats.length > 0 ? 0.95 : 1 }}
+                disabled={selectedSeats.length === 0}
                 onClick={() => {
-                  const total = selectedSeats.reduce((acc, key) => {
-                    const busId = Number(key.split("-")[0]);
-                    const bus = buses.find((b) => b.id === busId);
-                    return acc + (bus?.price || 0);
-                  }, 0);
-                  if (total > 0) window.location.href = "/payment";
+                  if (selectedSeats.length === 0) {
+                    alert("⚠️ Please select at least one seat before continuing!");
+                    return;
+                  }
+
+                  navigate("/passenger", {
+                    state: {
+                      selectedSeats,
+                      bus: buses.find((b) => b.id === selectedBusId),
+                    },
+                  });
                 }}
-                disabled={
-                  selectedSeats.reduce((acc, key) => {
-                    const busId = Number(key.split("-")[0]);
-                    const bus = buses.find((b) => b.id === busId);
-                    return acc + (bus?.price || 0);
-                  }, 0) === 0
-                }
-                className={`px-5 py-2 rounded-full font-semibold transition ${
-                  selectedSeats.reduce((acc, key) => {
-                    const busId = Number(key.split("-")[0]);
-                    const bus = buses.find((b) => b.id === busId);
-                    return acc + (bus?.price || 0);
-                  }, 0) === 0
-                    ? "bg-gray-400 cursor-not-allowed text-white"
-                    : "bg-red-500 hover:bg-red-600 text-white"
-                }`}
-              >Proceed to Payment</button>
+                className={`px-5 py-2 rounded-full font-semibold transition duration-200 
+                  ${selectedSeats.length === 0 
+                    ? "bg-gray-400 text-gray-200 cursor-not-allowed" 
+                    : "bg-red-500 hover:bg-red-600 text-white"}`}
+              >
+                Proceed
+              </motion.button>
             </div>
           </div>
         </div>

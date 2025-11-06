@@ -131,7 +131,7 @@ const TicketPage = () => {
             <FaDownload /> Download Ticket
           </button>
           <button
-            onClick={() => navigate("/home")}
+            onClick={() => navigate("/")}
             className="flex-1 bg-gray-800 hover:bg-gray-900 text-white py-2 rounded-lg flex items-center justify-center gap-2 font-medium transition"
           >
             <FaHome /> Home

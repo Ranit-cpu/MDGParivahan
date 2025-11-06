@@ -21,17 +21,17 @@ const HomePage = () => {
           </li>
           <li className="hover:text-blue-600 cursor-pointer transition">Features</li>
           <li className="hover:text-blue-600 cursor-pointer transition">Pricing</li>
-          <li className="hover:text-blue-600 cursor-pointer transition">Contact</li>
+          <li className="hover:text-blue-600 cursor-pointer transition">
+            <a href="/contact" className="hover:text-blue-600 transition">
+              Contact
+            </a></li>
         </ul>
         <div className="flex items-center space-x-2">
           <button
             onClick={() => navigate("/auth")}
-            className="text-gray-900 hover:text-blue-600 font-medium text-sm"
+            className="bg-blue-700/80 hover:bg-blue-800 text-white font-semibold px-4 py-1.5 rounded-full text-sm transition"
           >
             Login
-          </button>
-          <button className="bg-blue-700/80 hover:bg-blue-800 text-white font-semibold px-4 py-1.5 rounded-full text-sm transition">
-            Start Selling
           </button>
         </div>
       </nav>
