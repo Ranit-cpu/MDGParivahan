@@ -240,14 +240,9 @@ export default function BusList() {
             <h3 className="font-semibold text-lg mb-3">Filter buses</h3>
             {[
               "Primo Bus (10)",
-              "AC (29)",
-              "SLEEPER (29)",
-              "Single Seats (21)",
               "SEATER (9)",
-              "NONAC (2)",
-              "18:00–24:00 (31)",
+              "NON-AC (2)",
               "High Rated Buses (27)",
-              "Live Tracking (24)",
             ].map((f, i) => (
               <div
                 key={i}

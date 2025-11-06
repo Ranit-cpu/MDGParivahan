@@ -20,7 +20,6 @@ const HomePage = () => {
             </a>
           </li>
           <li className="hover:text-blue-600 cursor-pointer transition">Features</li>
-          <li className="hover:text-blue-600 cursor-pointer transition">Pricing</li>
           <li className="hover:text-blue-600 cursor-pointer transition">
             <a href="/contact" className="hover:text-blue-600 transition">
               Contact

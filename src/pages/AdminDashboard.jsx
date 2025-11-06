@@ -93,11 +93,16 @@ const AdminDashboard = () => {
             {[
               "Dashboard",
               "Bus Booking",
+              "GSTIN Settings",
+              "Track User Activity",
+              "Search",
+              "Print",
+              "Oerating Cities",
               "Buses",
               "Bus Schedule",
               "Cancellation Policy",
               "Reports & Analytics",
-              "Settings",
+              "Compaings",
             ].map((label) => (
               <button
                 key={label}
@@ -141,7 +146,7 @@ const AdminDashboard = () => {
 
               <div className="flex items-center gap-4">
                 <div className="bg-white/10 px-3 py-2 rounded-lg border border-white/10 flex items-center gap-2">
-                  <Calendar size={16} /> <span className="text-sm">02 Nov, 2025</span>
+                  <Calendar size={16} /> <span className="text-sm">08 Nov, 2025</span>
                 </div>
               </div>
             </div>
