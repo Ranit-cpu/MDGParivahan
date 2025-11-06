@@ -82,14 +82,14 @@ const UserDashboard = () => {
             {/* Booking Cards */}
             <div className="grid grid-cols-2 gap-6">
               <BookingCard
-                route="Bishwnapur to Arambagh"
+                route="Bishnupur to Karunamoyee"
                 id="MOEIRDNVCID 1723436"
                 date="5th Nov 2025"
                 status="Confirmed"
                 type="Completed"
               />
               <BookingCard
-                route="Karunamoyee to Arambagh"
+                route="Karunamoyee to Bishnupur"
                 id="MPDLXW876542"
                 date="1st Nov 2025"
                 status="Cancelled"
@@ -105,15 +105,15 @@ const UserDashboard = () => {
               <div className="flex space-x-4 overflow-x-auto pb-2">
                 <RecommendationCard
                   img="https://images.unsplash.com/photo-1506976785307-8732e854ad05?auto=format&fit=crop&w=800&q=60"
-                  title="Bishwnapur to Arambagh"
+                  title="Bishnupur to Karunamoyee"
                 />
                 <RecommendationCard
                   img=""
-                  title="Karunamoyee to Arambagh"
+                  title="Karunamoyee to Bishnupur"
                 />
                 <RecommendationCard
                   img="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=60"
-                  title="Kolkata to Digha"
+                  title="Karunamoyee to Bishnupur"
                 />
               </div>
             </div>

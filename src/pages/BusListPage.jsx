@@ -7,38 +7,38 @@ import { useNavigate } from "react-router-dom";
 const sampleBuses = [
   {
     id: 1,
-    name: "Kolkata - Bishnupur - Volvo A/C Seater (2+2)",
+    name: "Karunamoyee - Bishnupur - A/C Seater (2+2)",
     rating: 3.8,
     reviews: 264,
     startTime: "18:45",
     endTime: "06:45",
     duration: "4h",
     seats: 40,
-    price: 910,
-    from: "Esplanade",
+    price: 250,
+    from: "Karunamoyee",
   },
   {
     id: 2,
-    name: "Raipur Cruiser - Volvo 9600 (Sleeper)",
+    name: "Bishnupur - Karunamoyee - Non-A/C Seater (2+2)",
     rating: 4.6,
     reviews: 1318,
     startTime: "18:30",
     endTime: "07:30",
     duration: "13h",
-    seats: 32,
-    price: 1249,
-    from: "Sealdah",
+    seats: 40,
+    price: 198,
+    from: "Bishnupur",
   },
   {
     id: 3,
-    name: "Easy Ride - Multi Axle (2+2)",
+    name: "Esplanade - Bishnupur - Non-A/C Seater (2+2)",
     rating: 4.7,
     reviews: 603,
     startTime: "20:30",
     endTime: "09:25",
     duration: "12h 55m",
-    seats: 36,
-    price: 1500,
+    seats: 40,
+    price: 198,
     from: "Esplanade",
   },
 ];
@@ -214,14 +214,14 @@ export default function BusList() {
           <div className="flex items-center gap-3">
             <input
               className="px-3 py-2 rounded-lg bg-white/10 text-black placeholder-white/70 border border-white/10"
-              placeholder="From: Karunamoyee"
+              placeholder="From:"
             />
             <input
               className="px-3 py-2 rounded-lg bg-white/10 text-black placeholder-white/70 border border-white/10"
-              placeholder="To: Siliguri"
+              placeholder="To:"
             />
             <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-black">
-              <Calendar size={18} /> <span>02 Nov, 2025</span>
+              <Calendar size={18} /> <span>08 Nov, 2025</span>
             </div>
             <button className="rounded-full bg-red-500 px-3 py-2 text-black hover:bg-red-600">
               <Search size={16} />
@@ -264,8 +264,8 @@ export default function BusList() {
         <main className="flex-1 space-y-6">
           {/* header */}
           <div className="text-black/90">
-            <h2 className="text-lg">From <span className="font-semibold">Kolkata</span> to <span className="font-semibold">Siliguri</span></h2>
-            <p className="text-sm text-black/70">31 buses from other pickup and/or drop points</p>
+            {/* <h2 className="text-lg">From <span className="font-semibold">Bishnupur</span> to <span className="font-semibold">Karunamoyee</span></h2> */}
+            <p className="text-sm text-black/70">3 buses from other pickup and/or drop points</p>
           </div>
 
           {/* bus cards */}
