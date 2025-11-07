@@ -18,10 +18,17 @@ const AboutPage = () => {
             </a></span>
         </h1>
         <ul className="hidden md:flex space-x-6 text-xs font-medium text-gray-900">
+          <li className="hover:text-blue-600 cursor-pointer transition">
+            <a href="/" className="hover:text-blue-600 transition">Home
+              </a>
+              </li>
           <li className="hover:text-blue-600 cursor-pointer transition">About</li>
           <li className="hover:text-blue-600 cursor-pointer transition">Features</li>
           <li className="hover:text-blue-600 cursor-pointer transition">Pricing</li>
-          <li className="hover:text-blue-600 cursor-pointer transition">Contact</li>
+          <li className="hover:text-blue-600 cursor-pointer transition">
+            <a href="/contact" className="hover:text-blue-600 transition">
+              Contact
+            </a></li>
         </ul>
         <div className="flex items-center space-x-2">
           <button
