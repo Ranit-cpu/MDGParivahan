@@ -22,7 +22,7 @@ import {
   FaCcMastercard,
 } from "react-icons/fa";
 import dayjs from 'dayjs';
-
+import logo from '../images/MDG.png'; 
 function currentDate(){
   const date=dayjs().format('DD MMM YYYY');
   return date;
@@ -41,8 +41,7 @@ const PaymentPage = () => {
       <div className="w-[90%] mt-4 backdrop-blur-md bg-white/60 border border-white/30 rounded-full flex items-center justify-between px-6 py-2 text-sm shadow-md">
         <div className="flex items-center space-x-4">
           <div className="font-semibold text-lg flex items-center space-x-1">
-            <FaUserCircle className="text-blue-600" />
-            <span>MDG</span>
+            <span className="text-gray-800"> <img src={logo} alt="img" className="h-12 w-auto" /></span>
           </div>
           <div className="flex items-center space-x-6 text-gray-700">
             <a href="#">About</a>

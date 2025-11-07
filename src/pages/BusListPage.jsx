@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import { Calendar, Search, Star, Bus, Filter, Clock, IndianRupee } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import logo from '../images/MDG.png';
 
 
 const sampleBuses = [
@@ -205,10 +206,7 @@ export default function BusList() {
       <div className="bg-white/12 backdrop-blur-md border-b border-white/20 sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Bus className="text-black w-7 h-7" />
-            <h1 className="text-black font-semibold text-xl"><a href="/" className="hover:text-blue-600 transition">
-              MDG
-            </a></h1>
+           <span className="text-gray-800"> <img src={logo} alt="img" className="h-12 w-auto" /></span>
           </div>
 
           <div className="flex items-center gap-3">

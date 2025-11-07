@@ -2,6 +2,7 @@ import React from "react";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import logo from '../images/MDG.png';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const HomePage = () => {
       {/* Navbar */}
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-[80%] bg-white/30 backdrop-blur-md shadow-lg rounded-full flex items-center justify-between px-6 py-2 border border-white/30">
         <h1 className="text-lg md:text-xl font-bold tracking-wide">
-          <span className="text-gray-800"> MDG</span>
+          <span className="text-gray-800"> <img src={logo} alt="img" className="h-12 w-auto" /></span>
         </h1>
         <ul className="hidden md:flex space-x-6 text-xs font-medium text-gray-900">
           <li className="hover:text-blue-600 cursor-pointer transition">

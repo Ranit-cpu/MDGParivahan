@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import logo from '../images/MDG.png';
 
 export default function ContactUs() {
   const navigate = useNavigate();
@@ -45,9 +46,7 @@ export default function ContactUs() {
       {/* Navbar */}
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-[80%] bg-white/10 backdrop-blur-md shadow-lg rounded-full flex items-center justify-between px-6 py-2 border border-white/20">
         <h1 className="text-lg md:text-xl font-bold tracking-wide text-white">
-          <span className="text-red-500"><a href="/" className="hover:text-blue-600 transition">
-              MDG
-            </a></span>
+          <span className="text-gray-800"> <img src={logo} alt="img" className="h-12 w-auto" /></span>
         </h1>
         <ul className="hidden md:flex space-x-6 text-xs font-medium text-gray-200">
             <li className="hover:text-blue-600 cursor-pointer transition">
