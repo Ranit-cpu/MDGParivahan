@@ -21,7 +21,12 @@ import {
   FaAmazonPay,
   FaCcMastercard,
 } from "react-icons/fa";
+import dayjs from 'dayjs';
 
+function currentDate(){
+  const date=dayjs().format('DD MMM YYYY');
+  return date;
+}
 const PaymentPage = () => {
     const navigate = useNavigate();
   return (
@@ -85,11 +90,11 @@ const PaymentPage = () => {
           </h2>
           <div className="text-sm text-gray-700">
             <p className="flex items-center space-x-2">
-              <FaRoute /> <span>Route: Chadorah to Bangalore</span>
+              <FaRoute /> <span>Route: Karunamoyee to Bishnupur Bus Stand</span>
             </p>
-            <p>Date: 14 Apr</p>
+            <p>Date: {currentDate()}</p>
             <p className="flex items-center space-x-2">
-              <FaBus /> <span>Bus: Himialan Tours</span>
+              <FaBus /> <span>MDG Paribahan</span>
             </p>
             <p className="flex items-center space-x-2">
               <FaChair /> <span>Seats: A1, A2</span>
