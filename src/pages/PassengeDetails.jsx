@@ -50,8 +50,8 @@ const PassengerDetails = () => {
   ];
 
   const droppingOptions = [
-    "Durgapur City Centre",
-    "Asansol Bus Stand",
+    "Bishnupur Bus Stand",
+    "Arambagh Bus Stand",
     "Siliguri Junction",
     "Malda Town",
   ];
